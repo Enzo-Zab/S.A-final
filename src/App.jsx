@@ -15,10 +15,10 @@ export default function App() {
     <div className="App">
       <Header />
       <Routes>
-        <Route path="home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="cadastro" element={<Cadastro />} />
         <Route path="login" element={<Login />} />
-        <Route path="/" element={<Sobre />} />
+        <Route path="sobre" element={<Sobre />} />
         <Route path="busca" element={<Busca />} /> 
         <Route path="fotos" element={<Fotos />} /> 
       </Routes>
