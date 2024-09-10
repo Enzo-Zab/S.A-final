@@ -10,6 +10,9 @@ import Busca from './páginas/Busca';
 import Header from './Header';
 import Fotos from './páginas/fotos';
 import Pagamento from './páginas/pagamento';
+import Debito from './páginas/debito';
+import Credito from './páginas/credito';
+import Pix from './páginas/pix';
 
 
 export default function App() {
@@ -24,6 +27,9 @@ export default function App() {
         <Route path="busca" element={<Busca />} /> 
         <Route path="fotos" element={<Fotos />} /> 
         <Route path="pagamento" element={<Pagamento />} /> 
+        <Route path="debito" element={<Debito />} /> 
+        <Route path="credito" element={<Credito />} /> 
+        <Route path="pix" element={<Pix />} /> 
       </Routes>
     </div>
   );

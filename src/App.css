@@ -84,40 +84,43 @@ p {
   text-decoration: underline;
 }
 
-/* src/Galeria.css */
+/* Estilo para a galeria */
 .galeria {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr)); /* Aumenta a largura mínima das colunas para 250px */
+  grid-auto-rows: 300px; /* Aumenta a altura automática para as linhas */
+  gap: 15px; /* Espaço entre os itens */
+  padding: 15px;
+  background-color: #f5f5f5;
+  box-sizing: border-box;
 }
 
+/* Estilo para os itens da galeria */
+.galeria-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px; /* Borda arredondada para um visual mais moderno */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Estilo para as imagens */
 .galeria-item img {
-  border: 5px solid transparent;
-  flex-wrap: wrap;
-  width: 25rem;
-  height: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta a imagem para cobrir o contêiner sem distorcer */
   display: block;
-  transition: 1s;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Transição suave */
 }
 
-.galeria-item img:hover {
-  border: 5px solid rgb(253, 99, 93);
+/* Efeito ao passar o mouse */
+.galeria-item:hover {
+  transform: scale(1.05); /* Aumenta o item ao passar o mouse */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Aumenta a sombra ao passar o mouse */
 }
 
-.aling {
-  align-items: center;
-  justify-content: center;
-  margin: 3rem;
-  column-count: 2;
-}
-
-.aling img {
-  margin: 5rem;
-}
-
-.aling p, h1 {
-  margin: 5rem;
-  font-size: 2rem;
+.galeria-item:hover img {
+  opacity: 0.8; /* Diminui a opacidade da imagem ao passar o mouse */
 }
 
 /*Pagina Home*/
@@ -311,3 +314,99 @@ p {
 }
 
 /*----------fim pagina busca-------------*/
+
+/* Estilo para o contêiner principal da página Sobre */
+.sobre-container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha em telas menores */
+  align-items: flex-start; /* Alinha os itens ao topo para uma disposição mais natural */
+  gap: 20px; /* Espaço entre a imagem e o texto */
+  padding: 20px;
+  background-color: #f9f9f9; /* Cor de fundo leve para contraste */
+  box-sizing: border-box; /* Inclui o padding e border no tamanho total do contêiner */
+}
+
+/* Estilo para a imagem */
+.sobre-imagem {
+  flex: 1;
+  min-width: 300px; /* Largura mínima para garantir que a imagem não fique muito pequena */
+}
+
+.sobre-imagem img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Adiciona bordas arredondadas à imagem */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para um efeito de profundidade */
+}
+
+/* Estilo para o texto */
+.sobre-texto {
+  flex: 2;
+  min-width: 300px; /* Largura mínima para garantir que o texto não fique muito estreito */
+  font-family: 'Arial', sans-serif; /* Fonte clara e legível */
+  line-height: 1.8; /* Aumenta o espaçamento entre linhas para melhor leitura */
+  color: #333; /* Cor do texto para bom contraste */
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+.sobre-texto h1 {
+  margin-top: 0;
+  font-size: 2rem; /* Tamanho da fonte para os títulos */
+  color: #222; /* Cor do título para destaque */
+  font-weight: bold; /* Fonte em negrito para títulos */
+}
+
+.sobre-texto p {
+  font-size: 1.3rem; /* Tamanho da fonte para o parágrafo */
+  margin: 0% 0% 0% 10%; /* Remove a margem padrão dos parágrafos */
+  padding: 0; /* Remove o padding padrão dos parágrafos */
+  width: 80%;
+}
+
+/* Adiciona um espaço extra entre parágrafos */
+.sobre-texto p + p {
+  margin-top: 1rem;
+}
+
+/* Citações */
+.sobre-texto blockquote {
+  font-size: 1.1rem; /* Tamanho da fonte para citações */
+  font-style: italic; /* Estilo itálico para citações */
+  border-left: 4px solid #ddd; /* Linha vertical à esquerda da citação */
+  padding-left: 15px; /* Espaçamento interno à esquerda da citação */
+  margin: 1rem 0; /* Margem em cima e embaixo da citação */
+  color: #666; /* Cor do texto da citação */
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .sobre-container {
+    gap: 15px; /* Reduz o espaço entre a imagem e o texto */
+  }
+}
+
+@media (max-width: 768px) {
+  .sobre-container {
+    flex-direction: column; /* Alinha a imagem e o texto em coluna em telas menores */
+    align-items: center; /* Centraliza os itens em telas menores */
+    gap: 10px; /* Reduz o espaço entre a imagem e o texto */
+  }
+
+  .sobre-imagem, .sobre-texto {
+    min-width: 100%; /* Garante que ambos os elementos ocupem a largura total */
+  }
+}
+
+@media (max-width: 480px) {
+  .sobre-texto h1 {
+    font-size: 1.5rem; /* Reduz o tamanho do título para telas menores */
+  }
+
+  .sobre-texto p {
+    font-size: 0.9rem; /* Reduz o tamanho do parágrafo para telas menores */
+  }
+
+  .sobre-texto blockquote {
+    font-size: 1rem; /* Reduz o tamanho da fonte da citação para telas menores */
+  }
+}
