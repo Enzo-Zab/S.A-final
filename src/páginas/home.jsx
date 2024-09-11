@@ -15,6 +15,7 @@ function Home() {
         <div className="buttons-container">
           <a href="/login" className="btn-h">Login</a>
           <a href="/cadastro" className="btn-h">Registrar</a>
+          <a href="/adm" className="btn-h">Administrador</a>
         </div>
       </div>
     </div>

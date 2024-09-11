@@ -8,12 +8,13 @@
 }
 
 .align {
-  background-color: #ffffff; /* Fundo branco para o formulário */
+  background-color: #E6E6E6; /* Fundo branco para o formulário */
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   max-width: 600px; /* Aumentado para acomodar campos lado a lado */
   width: 100%;
+  
 }
 
 h1 {
@@ -48,10 +49,15 @@ label {
 }
 
 input {
-  width: 100%; /* Ocupa 100% da largura do contêiner pai */
+
+
+  width: 85%; /* Ocupa 100% da largura do contêiner pai */
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
+}
+#password {
+  width: 93%;
 }
 
 .register-button {
@@ -215,15 +221,62 @@ p {
 	padding: 20px;
 	background-color: #E6E6E6;
 	border-radius: 10px;
-	width: 1100px;
+	max-width: 1100px;
 	height: 150px;
 }
+.payment-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+}
 
+.credit-card-form {
+  display: text;
+  flex-direction: column;
+  
+}
+
+.form-group {
+  margin-bottom: 15px;
+
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn-submit {
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #800000;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  margin-left: 124%;
+  margin-top: 10px;
+}
 .quarto-image {
 	width: 150px;
 	height: 150px;
 	border-radius: 50%;
 	margin-right: 20px;
+}
+#card-number.input, #card-name, #expiry-date, #cvv, #pix-key, #amount,{
+  width: 270%;
 }
 
 .quarto-text {
@@ -409,4 +462,156 @@ p {
   .sobre-texto blockquote {
     font-size: 1rem; /* Reduz o tamanho da fonte da citação para telas menores */
   }
+}
+
+
+#root {
+  max-width: 1280px;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* src/components/AdminDashboard.css */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #d32f2f;
+}
+
+/* src/components/AdminDashboard.css */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #d32f2f;
+}
+
+.reservation-form {
+  margin-bottom: 20px;
+}
+
+.reservation-form .form-group {
+  margin-bottom: 10px;
+}
+
+.reservation-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.reservation-form input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.reservation-form button {
+  background-color: #8a0303;
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.reservation-form button:hover {
+  background-color: #45a049;
+}
+
+input {
+  max-width: 350px;
+}
+
+.aling {
+display: flex;
+flex-flow: row wrap;
+justify-content: center;
+align-items: center;
+}
+
+.quartos {
+  margin: 3rem;
+  background-color: #cfcfcf;
+  height: 600px;
+  width: 500px;
+  border-radius: 20px;
+}
+
+.clientes {
+  margin: 3rem;
 }

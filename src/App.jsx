@@ -13,6 +13,7 @@ import Pagamento from './páginas/pagamento';
 import Debito from './páginas/debito';
 import Credito from './páginas/credito';
 import Pix from './páginas/pix';
+import Adm from './páginas/adm';
 
 
 export default function App() {
@@ -30,6 +31,7 @@ export default function App() {
         <Route path="debito" element={<Debito />} /> 
         <Route path="credito" element={<Credito />} /> 
         <Route path="pix" element={<Pix />} /> 
+        <Route path="adm" element={<Adm />} /> 
       </Routes>
     </div>
   );

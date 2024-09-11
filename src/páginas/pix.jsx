@@ -49,7 +49,7 @@ function Pix() {
                         </div>
 
                         <div className="form-group">
-                            <button type="submit" className="btn-submit">Pagar via Pix</button>
+                            <button type="submit" className="btn-submit">Pagar</button>
                         </div>
                     </form>
                 </div>
